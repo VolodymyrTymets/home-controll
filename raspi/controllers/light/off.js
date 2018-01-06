@@ -4,7 +4,7 @@ const offLight = async (req, res, next) => {
   try {
     console.log('light off');
     const lightController = new GpioController();
-    await lightController.lightOnf();
+    await lightController.lightOff();
     res.status(200).end();
   } catch (error) {
     console.log('Gpio not detected');
