@@ -1,9 +1,15 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const light = require('../controllers/light');
 
-module.exports = router;
+const routers = () => {
+    const router = express();
+
+    // api routes v1 (/api/v1)
+    router.use('/light', light());
+
+    return router;
+};
+
+module.exports = routers;
+
