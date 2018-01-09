@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
   colorGreen: {
     backgroundColor: '#26c6da',
   },
+  colorLink: {
+    color: '#03a9f4',
+    textAlign: 'center',
+  },
   selectorContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -77,10 +81,15 @@ const LightControl = ({ onPress, onSelectDate, time }) => (
       <Button
         raised
         large
-        onPress={onPress('time')}
+        onPress={onPress('setTime')}
         buttonStyle={[styles.colorGreen]}
         textStyle={{textAlign: 'center'}}
         title='Save working hours' />
+    </View>
+    <View style={[styles.margin, styles.headerContainer]}>
+      <TouchableOpacity onPress={onPress('unSetTime')}>
+        <Text style={[styles.colorLink]}> Clear working hours </Text>
+      </TouchableOpacity>
     </View>
   </View>
 );

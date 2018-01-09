@@ -45,6 +45,18 @@ ${fetchOptions.body ? `with body: ${fetchOptions.body}` : ''}`);
   lightOff() {
     return this._callApi('light/off', {method: 'POST'});
   }
+  /**
+   * set Time
+   */
+  setTime(from, to) {
+    return this._callApi('time/set', {method: 'POST', body: { from, to } });
+  }
+  /**
+   * unset Time
+   */
+  unSetTime() {
+    return this._callApi('time/unset', {method: 'POST'});
+  }
 }
 
 export default new Api();

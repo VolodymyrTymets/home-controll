@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var routes = require('./routes');
 var app = express();
 
+require('./tasks');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

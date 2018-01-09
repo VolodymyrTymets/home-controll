@@ -21,6 +21,17 @@ const enhance = compose(
           .then(console.log('-> light off'))
           .catch(logError);
       }
+      if(type === 'setTime') {
+        return api.setTime(props.time.from, props.time.to)
+          .then(console.log('-> time was set'))
+          .catch(logError);
+      }
+      if(type === 'unSetTime') {
+        props.setTime({ from: {}, to: {} });
+        return api.unSetTime()
+          .then(console.log('->time was unset'))
+          .catch(logError);
+      }
     },
     onSelectDate: props => type => async () => {
       try {
