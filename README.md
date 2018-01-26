@@ -11,7 +11,7 @@ To run
  ``` 
 
 
-## Server (Raspberry Py)
+## Server (Raspberry Pi)
 
 To run 
  ```
