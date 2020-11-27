@@ -23,6 +23,7 @@
     "react": "16.0.0",
     "react-native": "0.50.3",
     "react-native-elements": "^0.18.5",
-    "recompose": "^0.26.0"
+    "recompose": "^0.26.0",
+    "onoff": "^6.0.1"
   }
 }
